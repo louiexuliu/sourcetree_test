@@ -17,7 +17,9 @@ class Solution {
 
             }else if (c == '}' && !stack.isEmpty()&& stack.peek() == '{'){
                 stack.pop();
-            }
+                //为了防止其他情况被误认为true，其他情况全部false
+            }else
+                return false;
 
         }
         return stack.isEmpty();
